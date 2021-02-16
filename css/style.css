@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
 * {
     border: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
     width: 60px;
     height: 60px;
     background-color: transparent;
-    border: 6px solid rgba(49, 26, 164, 0.812);
+    border: 6px solid rgba(255, 255, 255, 0.326);
 }
 
 .box div:nth-child(1) {
@@ -104,37 +104,34 @@ body {
 
 .containerFoto {
     position: relative;
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
     width: 300px;
     height: 300px;
-    background-color: rgba(49, 26, 164, 0.326);
+    background-color: rgba(255, 255, 255, 0.326);
     border-radius: 0 10% 10% 0;
     box-shadow: 0 0 10px rgba(49, 26, 164, 0.326);
     color: white;
 }
 
 .my-image {
-    position: absolute;
-    top: 18px;
-    left: 60px;
+    display: block;
     border-radius: 50%;
     height: 180px;
     width: 180px;
 }
 
 .nome {
-    position: absolute;
-    top: 210px;
-    left: 80px;
+    display: block;
     text-align: center;
 }
 
 .social-media {
     left: 40px;
-    top: 89%;
+    top: 90%;
     position: absolute;
     border-radius: 30px;
     background-color: rgba(150, 150, 150, 0.607);
@@ -170,14 +167,15 @@ svg {
 .containerPortfolio {
     overflow: hidden;
     overflow-y: scroll;
-    height: 100%;
+    height: 100vh;
     margin-top: 30px;
     margin-left: 20%;
-    padding: 20px;
+    margin-right: 5%;
+    padding: 36px 50px;
     text-align: center;
-    width: 50%;
+    width: 580px;
     z-index: 1;
-    background-color: rgba(49, 26, 164, 0.326);
+    background-color: rgba(255, 255, 255, 0.326);
     color: white;
     box-shadow: 0 0 10px rgba(49, 26, 164, 0.326);
     border-radius: 28px 28px 0 0;
@@ -214,6 +212,7 @@ h3 {
     height: 190px;
     width: 140px;
     margin-bottom: 40px;
+    background-size: cover;
 }
 
 .project-button {
@@ -323,13 +322,16 @@ h3 {
     }
     .containerPortfolio {
         margin-top: 10%;
-        margin-left: 0px;
+        margin-left: 5%;
         height: 80%;
         width: 70%;
     }
 }
 
 @media (max-width: 468px) {
+    .containerFoto {
+        width: 70%
+    }
     .containerPortfolio {
         width: 90%;
     }
